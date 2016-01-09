@@ -20,7 +20,8 @@ var uname = require('node-uname');
 
 console.log(uname());
 
-// { sysname: 'Darwin',
+// Utsname {
+//   sysname: 'Darwin',
 //   nodename: 'MacBook.local',
 //   release: '15.0.0',
 //   version: 'Darwin Kernel Version ...',
