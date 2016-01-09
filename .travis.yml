@@ -1,5 +1,6 @@
 ---
 language: node_js
+sudo: false
 
 node_js:
 - "v5.4.0"
@@ -8,18 +9,21 @@ node_js:
 env:
 - CXX=g++-4.8
 
-script:
-- npm run coverage
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
 
 cache:
   directories:
-    - node_modules
+  - node_modules
+
+script:
+- npm run coverage
 
 before_script:
   - "export PATH=$PATH:node_modules/.bin"
   - "node-gyp rebuild"
 
-before_install:
-  - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-  - sudo apt-get update -q
-  - sudo apt-get install g++-4.8 -y
