@@ -8,7 +8,7 @@ node_js:
 script:
 - npm run coverage
 
-ompiler: clang
+compiler: clang
 
 cache:
   directories:
