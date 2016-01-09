@@ -16,4 +16,5 @@ cache:
 
 before_script:
   - "export PATH=$PATH:node_modules/.bin"
-  - "npm run install"
+  - "node-gyp configure"
+  - "node-gyp rebuild"
