@@ -1,0 +1,39 @@
+{
+  "name": "node-uname",
+  "version": "1.0.0",
+  "description": "Wrapper around the uname call",
+  "main": "uname.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "test": "mocha",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bash/node-uname.git"
+  },
+  "keywords": [
+    "uname",
+    "linux",
+    "darwin"
+  ],
+  "author": "Ruben Schmidmeister <ruben.schmidmeister@icloud.com>",
+  "license": "MIT",
+  "gypfile": true,
+  "bugs": {
+    "url": "https://github.com/bash/node-uname/issues"
+  },
+  "homepage": "https://github.com/bash/node-uname#readme",
+  "dependencies": {
+    "bindings": "~1.2.1"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.6",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "mocha-lcov-reporter": "^1.0.0",
+    "node-gyp": "^3.2.1"
+  }
+}

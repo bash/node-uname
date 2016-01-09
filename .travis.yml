@@ -1,0 +1,17 @@
+---
+language: node_js
+
+node_js:
+- "v5.4.0"
+- "v0.10.24"
+
+script:
+- npm run coverage
+
+cache:
+  directories:
+    - node_modules
+
+before_script:
+  - "export PATH=$PATH:node_modules/.bin"
+  - "npm run install"
