@@ -41,10 +41,6 @@ namespace bash
     Result->Set(String::NewFromUtf8(isolate, "version"), String::NewFromUtf8(isolate, info.version));
     Result->Set(String::NewFromUtf8(isolate, "machine"), String::NewFromUtf8(isolate, info.machine));
 
-    #ifdef _GNU_SOURCE
-    Result->Set(String::NewFromUtf8(isolate, "domainname"), String::NewFromUtf8(isolate, info.domainname));
-    #endif
-
     args.GetReturnValue().Set(Result);
   }
 
