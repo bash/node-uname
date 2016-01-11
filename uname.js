@@ -56,7 +56,7 @@ function Utsname(sysname, nodename, release, version, machine) {
  * @throws {Error}
  */
 function uname() {
-  var info = native.uname();
+  var info = native.uname()
 
-  return new Utsname(info.sysname, info.nodename, info.release, info.version, info.machine);
+  return new Utsname(info.sysname, info.nodename, info.release, info.version, info.machine)
 }
