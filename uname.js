@@ -2,11 +2,11 @@
  * (c) 2015 Ruben Schmidmeister
  */
 
-'use strict';
+'use strict'
 
-module.exports = uname;
+module.exports = uname
 
-var native = require('bindings')('uname');
+var native = require('bindings')('uname')
 
 /**
  *
@@ -22,31 +22,31 @@ function Utsname(sysname, nodename, release, version, machine) {
    *
    * @type {string}
    */
-  this.sysname = sysname;
+  this.sysname = sysname
 
   /**
    *
    * @type {string}
    */
-  this.nodename = nodename;
+  this.nodename = nodename
 
   /**
    *
    * @type {string}
    */
-  this.release = release;
+  this.release = release
 
   /**
    *
    * @type {string}
    */
-  this.version = version;
+  this.version = version
 
   /**
    *
    * @type {string}
    */
-  this.machine = machine;
+  this.machine = machine
 }
 
 
