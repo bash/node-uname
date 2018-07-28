@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Wrapper around the uname call",
   "main": "uname.js",
+  "types": "uname.d.ts",
   "dependencies": {
     "bindings": "^1.3.0"
   },
