@@ -6,7 +6,7 @@
 #include <v8.h>
 #include <sys/utsname.h>
 
-namespace bash
+namespace NodeUname
 {
   using v8::Object;
   using v8::String;
@@ -33,15 +33,15 @@ namespace bash
       return;
     }
 
-    Handle<Object> Result = Object::New(isolate);
+    Handle<Object> result = Object::New(isolate);
 
-    Result->Set(String::NewFromUtf8(isolate, "sysname"), String::NewFromUtf8(isolate, info.sysname));
-    Result->Set(String::NewFromUtf8(isolate, "nodename"), String::NewFromUtf8(isolate, info.nodename));
-    Result->Set(String::NewFromUtf8(isolate, "release"), String::NewFromUtf8(isolate, info.release));
-    Result->Set(String::NewFromUtf8(isolate, "version"), String::NewFromUtf8(isolate, info.version));
-    Result->Set(String::NewFromUtf8(isolate, "machine"), String::NewFromUtf8(isolate, info.machine));
+    result->Set(String::NewFromUtf8(isolate, "sysname"), String::NewFromUtf8(isolate, info.sysname));
+    result->Set(String::NewFromUtf8(isolate, "nodename"), String::NewFromUtf8(isolate, info.nodename));
+    result->Set(String::NewFromUtf8(isolate, "release"), String::NewFromUtf8(isolate, info.release));
+    result->Set(String::NewFromUtf8(isolate, "version"), String::NewFromUtf8(isolate, info.version));
+    result->Set(String::NewFromUtf8(isolate, "machine"), String::NewFromUtf8(isolate, info.machine));
 
-    args.GetReturnValue().Set(Result);
+    args.GetReturnValue().Set(result);
   }
 
   void Init(Handle<Object> exports)
@@ -50,7 +50,6 @@ namespace bash
     Local<FunctionTemplate> Template = FunctionTemplate::New(isolate, GetUname);
 
     exports->Set(String::NewFromUtf8(isolate, "uname"), Template->GetFunction());
-
   }
 
   NODE_MODULE(uname, Init)
