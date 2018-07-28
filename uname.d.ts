@@ -1,5 +1,5 @@
 declare module 'node-uname' {
-  class Utsname {
+  export class Utsname {
     sysname: string
     nodename: string
     release: string
@@ -7,7 +7,5 @@ declare module 'node-uname' {
     machine: string
   }
 
-  function uname(): Utsname
-
-  export = uname
+  export function uname(): Utsname
 }

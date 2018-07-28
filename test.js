@@ -1,10 +1,6 @@
-/**
- * (c) 2015 Ruben Schmidmeister
- */
-
 'use strict'
 
-const uname = require('./uname')
+const { uname } = require('./uname')
 const assert = require('assert')
 
 describe('uname', () => {
