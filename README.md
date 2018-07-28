@@ -5,20 +5,21 @@
 [![npm version](https://badge.fury.io/js/node-uname.svg)](https://badge.fury.io/js/node-uname)
 [![dependencies](https://david-dm.org/bash/node-uname.svg)](https://david-dm.org/bash/node-uname)
 
-A wrapper around the `uname` call.
+A wrapper around the `uname` call.  
+Works on GNU/Linux and MacOS.
 
-## installation
+## Installation
 
-```
+```bash
 npm install node-uname
 ```
 
-## example
+## Example
 
-```js
-var uname = require('node-uname');
+```javascript
+const { uname } = require('node-uname')
 
-console.log(uname());
+console.log(uname())
 
 // Utsname {
 //   sysname: 'Darwin',
@@ -29,6 +30,6 @@ console.log(uname());
 ```
 
 ## uname()
-The uname() function returns an object containing sysname, nodename, release, version and machine.
+The uname() function returns an object containing `sysname`, `nodename`, `release`, `version` and machine.
 
 If the internal call to the kernel's [`uname`](http://man7.org/linux/man-pages/man2/uname.2.html) function fails an [Error](https://nodejs.org/api/errors.html) is thrown.
