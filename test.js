@@ -4,12 +4,12 @@
 
 'use strict'
 
-var uname = require('./uname'),
-    assert = require('assert')
+const uname = require('./uname')
+const assert = require('assert')
 
-describe('uname', function () {
-  it('returns an object containing string values', function () {
-    var info = uname()
+describe('uname', () => {
+  it('returns an object containing string values', () => {
+    const info = uname()
 
     assert('string', typeof info.sysname)
     assert('string', typeof info.nodename)
