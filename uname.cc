@@ -1,7 +1,3 @@
-/**
- * (c) 2015 Ruben Schmidmeister <ruby@fog.im>
- */
-
 #include <node.h>
 #include <v8.h>
 #include <sys/utsname.h>
