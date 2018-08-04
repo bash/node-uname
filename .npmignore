@@ -1,0 +1,6 @@
+.vscode/
+.editorconfig
+.gitignore
+.jshintrc
+.travis.yml
+build
