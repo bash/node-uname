@@ -1,10 +1,10 @@
 {
-  "targets": [
-    {
-      "target_name": "uname",
-      "sources": [
-        "uname.cc"
-      ]
-    }
-  ]
+    "targets": [
+        {
+            "target_name": "uname",
+            "sources": [
+                "uname.c"
+            ]
+        }
+    ]
 }
