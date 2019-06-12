@@ -7,10 +7,15 @@ describe('uname', () => {
   it('returns an object containing string values', () => {
     const info = uname()
 
-    assert('string', typeof info.sysname)
-    assert('string', typeof info.nodename)
-    assert('string', typeof info.release)
-    assert('string', typeof info.version)
-    assert('string', typeof info.machine)
+    assertIsNonEmptyString(info.sysname)
+    assertIsNonEmptyString(info.nodename)
+    assertIsNonEmptyString(info.release)
+    assertIsNonEmptyString(info.version)
+    assertIsNonEmptyString(info.machine)
   })
 })
+
+function assertIsNonEmptyString(value) {
+  assert.strictEqual('string', typeof value);
+  assert.notStrictEqual('', value);
+}
