@@ -1,6 +1,6 @@
 {
   "name": "node-uname",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Wrapper around the uname call",
   "main": "uname.js",
   "types": "uname.d.ts",
