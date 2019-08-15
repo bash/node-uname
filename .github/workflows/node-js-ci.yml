@@ -12,7 +12,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         version: 10.x
-    - name: npm install, build, and test
+    - name: Build
       run: |
         node-gyp rebuild
         npm run coverage
