@@ -12,6 +12,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         version: 10.x
+    - run: npm install -g node-gyp
     - name: Build
       run: |
         node-gyp rebuild
