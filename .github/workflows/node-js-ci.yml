@@ -13,6 +13,8 @@ jobs:
       with:
         version: 10.x
     - run: npm install -g node-gyp yarn
+    - name: Install Dependencies
+      run: yarn install
     - name: Build
       run: yarn build
     - name: Test
