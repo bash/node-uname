@@ -15,9 +15,8 @@
   },
   "scripts": {
     "install": "node-gyp rebuild",
-    "test": "mocha",
-    "build": "node-gyp rebuild",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+    "test": "nyc --reporter=lcov mocha",
+    "build": "node-gyp rebuild"
   },
   "repository": {
     "type": "git",
@@ -34,5 +33,5 @@
   "bugs": {
     "url": "https://github.com/bash/node-uname/issues"
   },
-  "homepage": "https://github.com/bash/node-uname#readme"
+  "homepage": "https://github.com/bash/node-uname"
 }

@@ -1,6 +1,9 @@
-.vscode/
+/build/
+/node_modules/
+/.nyc_output/
+/coverage/
+yarn.lock
+.github/
 .editorconfig
 .gitignore
 .jshintrc
-.travis.yml
-build

@@ -1,6 +1,6 @@
 name: Node CI
 
-on: [push]
+on: ["push", "pull_request"]
 
 jobs:
   build:
@@ -8,14 +8,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+
     - name: Use Node.js 10.x
       uses: actions/setup-node@v1
       with:
         version: 10.x
     - run: npm install -g node-gyp yarn
+
     - name: Install Dependencies
       run: yarn install
     - name: Build
       run: yarn build
     - name: Test
       run: yarn test
+
+    - name: Report Coverage
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
