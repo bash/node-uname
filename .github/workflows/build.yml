@@ -21,8 +21,3 @@ jobs:
       run: yarn build
     - name: Test
       run: yarn test
-
-    - name: Report Coverage
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}

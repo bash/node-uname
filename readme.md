@@ -1,7 +1,6 @@
 # node-uname
 
 [![Build Status](https://github.com/bash/node-uname/workflows/Build/badge.svg)](https://github.com/bash/node-uname/actions)
-[![Coverage Status](https://coveralls.io/repos/bash/node-uname/badge.svg?branch=master&service=github)](https://coveralls.io/github/bash/node-uname?branch=master)
 [![npm version](https://badge.fury.io/js/node-uname.svg)](https://badge.fury.io/js/node-uname)
 
 A wrapper around the `uname` call.  
