@@ -1,6 +1,6 @@
 {
   "name": "node-uname",
-  "version": "3.0.4",
+  "version": "3.1.0",
   "description": "Wrapper around the uname call",
   "type": "module",
   "main": "uname.cjs",
