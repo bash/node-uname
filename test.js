@@ -1,7 +1,5 @@
-'use strict'
-
-const { uname } = require('./uname')
-const assert = require('assert')
+import { uname } from 'node-uname'
+import assert from 'assert'
 
 describe('uname', () => {
   it('returns an object containing string values', () => {
