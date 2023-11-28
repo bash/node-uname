@@ -25,7 +25,7 @@
     "linux",
     "darwin"
   ],
-  "author": "Ruben Schmidmeister <ruben.schmidmeister@icloud.com>",
+  "author": "Tau (https://tau.garden)",
   "license": "MIT",
   "gypfile": true,
   "bugs": {
