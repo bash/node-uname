@@ -7,17 +7,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
-
+    - uses: actions/checkout@v4
     - name: Use Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         version: 16.x
-    - run: npm install -g node-gyp yarn
-
+    - run: npm install -g node-gyp
     - name: Install Dependencies
-      run: yarn install
+      run: npm ci
     - name: Build
-      run: yarn build
+      run: npm build
     - name: Test
-      run: yarn test
+      run: npm test
+    - name: Pack
+      run: npm pack
