@@ -15,7 +15,7 @@ npm install node-uname
 ## Example
 
 ```javascript
-const { uname } = require('node-uname')
+import { uname } from 'node-uname'
 
 console.log(uname())
 
