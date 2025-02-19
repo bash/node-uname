@@ -15,8 +15,8 @@
     "bindings": "^1.3"
   },
   "devDependencies": {
-    "mocha": "^10.4",
-    "node-gyp": "^10.1",
+    "mocha": "^11.1",
+    "node-gyp": "^11.1",
     "rollup": "^4.14"
   },
   "scripts": {
